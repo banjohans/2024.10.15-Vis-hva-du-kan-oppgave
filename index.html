@@ -80,7 +80,7 @@
     <span class="banjoFacts">Banjo facts</span>
     <div class="banjo-selections">
       <label for="banjoSelect" class="ChooseABanjo">Choose a banjo:</label>
-      <select id="banjoSelect" class="BanjoDropDownMenu">
+      <select id="banjoSelect" class="BanjoDropDownMenu" onchange="loadBanjo()">
         <option value="akontingCard">1600s Akonting</option>
         <option value="minstrelCard">1800s Minstrel</option>
         <option value="dobsonCard">1880s HC Dobson</option>
@@ -89,9 +89,9 @@
           Prewar Gibson Style 7 Top Tension
         </option>
       </select>
-      <div class="ButtonContainer">
+      <!-- <div class="ButtonContainer">
         <button class="Button" onclick="loadBanjo()">Load banjofact</button>
-      </div>
+      </div> -->
     </div>
 
     <!-- This is where the banjo info will be displayed -->
