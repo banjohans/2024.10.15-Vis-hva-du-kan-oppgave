@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Puzzle Solver</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="MacbookPro141">
+      <!-- Header Section -->
+      <div class="JavascriptPuzzleSolverByHansMartinRundbergAustestad2024">
+        <span>JavaScript Puzzle Solver</span><br />
+        <span>by Hans Martin Rundberg Austestad 2024</span>
+      </div>
+
+      <!-- Puzzle Selector Section -->
+      <div class="PuzzleSelector">
+        <label for="puzzleSelect" class="ChooseAPuzzle">Choose a puzzle:</label>
+        <select id="puzzleSelect" class="PuzzleDropDownMenu">
+          <option value="reverseStringBug">Reverse String Bug</option>
+          <option value="sumOfTwoNumbersBug">Sum of Two Numbers Bug</option>
+          <option value="sumOfThreeNumbersBug">Sum of Three Numbers Bug</option>
+          <option value="testProofOfConceptCode">Proof of concept test</option>
+        </select>
+        <div class="ButtonContainer">
+          <button class="Button" onclick="loadPuzzle()">
+            Load puzzle into code window (or reset)
+          </button>
+        </div>
+      </div>
+
+      <!-- Puzzle Description Section -->
+      <div class="PuzzleDescription">
+        <div class="PuzzleDescriptionTitle">Puzzle Description</div>
+        <p id="puzzleDescription">
+          A puzzle description will appear here upon puzzle load.
+        </p>
+      </div>
+
+      <!-- Input Field Container -->
+      <div
+        class="PuzzleInputHideable"
+        id="inputContainer"
+        style="display: none"
+      >
+        <div class="PuzzleInputEnterTestValuesHere">
+          Puzzle input (enter test values here):
+        </div>
+        <input
+          type="text"
+          id="puzzleInput"
+          class="EnterInputValues"
+          placeholder="Enter input values"
+        />
+      </div>
+
+      <!-- Code Editor Section -->
+      <div class="CodeEditor">
+        Code editor
+        <div class="Rectangle1">
+          <textarea id="codeEditor" rows="10" cols="50"></textarea>
+        </div>
+      </div>
+
+      <!-- Execute Code Button -->
+      <div class="ButtonContainer">
+        <button class="ButtonExecute" onclick="executeCode()">
+          Execute Code
+        </button>
+      </div>
+      <br />
+      <!-- Puzzle Output Section -->
+      <div class="PuzzleOutputField">
+        <div class="PuzzleOutput">Puzzle Output:</div>
+        <h4 id="output">Output will appear here</h4>
+      </div>
+    </div>
+
+    <span class="banjoFacts">Banjo facts</span>
+    <div class="banjo-selections">
+      <label for="banjoSelect" class="ChooseABanjo">Choose a banjo:</label>
+      <select id="banjoSelect" class="BanjoDropDownMenu">
+        <option value="akontingCard">1600s Akonting</option>
+        <option value="minstrelCard">1800s Minstrel</option>
+        <option value="dobsonCard">1880s HC Dobson</option>
+        <option value="mastertoneCard">Prewar Gibson Mastertone</option>
+        <option value="toptensionCard">
+          Prewar Gibson Style 7 Top Tension
+        </option>
+      </select>
+      <div class="ButtonContainer">
+        <button class="Button" onclick="loadBanjo()">Load banjofact</button>
+      </div>
+    </div>
+
+    <!-- This is where the banjo info will be displayed -->
+    <div id="banjoFactContainer"></div>
+
+    <!-- Include JavaScript -->
+    <script src="puzzles.js"></script>
+  </body>
+</html>
